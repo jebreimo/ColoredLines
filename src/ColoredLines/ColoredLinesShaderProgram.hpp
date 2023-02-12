@@ -14,16 +14,16 @@ public:
     void setup();
 
     Tungsten::ProgramHandle program;
-    Tungsten::Uniform<Xyz::Vector2f> redOrigin;
-    Tungsten::Uniform<Xyz::Vector2f> redVector;
+    Tungsten::Uniform<Xyz::Vector2F> redOrigin;
+    Tungsten::Uniform<Xyz::Vector2F> redVector;
     Tungsten::Uniform<float> redPhase;
     Tungsten::Uniform<float> redPeriod;
-    Tungsten::Uniform<Xyz::Vector2f> greenOrigin;
-    Tungsten::Uniform<Xyz::Vector2f> greenVector;
+    Tungsten::Uniform<Xyz::Vector2F> greenOrigin;
+    Tungsten::Uniform<Xyz::Vector2F> greenVector;
     Tungsten::Uniform<float> greenPhase;
     Tungsten::Uniform<float> greenPeriod;
-    Tungsten::Uniform<Xyz::Vector2f> blueOrigin;
-    Tungsten::Uniform<Xyz::Vector2f> blueVector;
+    Tungsten::Uniform<Xyz::Vector2F> blueOrigin;
+    Tungsten::Uniform<Xyz::Vector2F> blueVector;
     Tungsten::Uniform<float> bluePhase;
     Tungsten::Uniform<float> bluePeriod;
     GLuint positionAttribute;

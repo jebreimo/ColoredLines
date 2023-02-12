@@ -11,14 +11,9 @@ endif ()
 
 include(FetchContent)
 
-if (DEFINED LOCAL_SOURCE_PACKAGE_DIR)
-    FetchContent_Declare(tungsten
-        URL "file://${LOCAL_SOURCE_PACKAGE_DIR}/Tungsten-0.1.3.4.tar.gz")
-else ()
-    FetchContent_Declare(tungsten
-        GIT_REPOSITORY "https://github.com/jebreimo/Tungsten.git"
-        GIT_TAG v0.1.3)
-endif ()
+FetchContent_Declare(tungsten
+    GIT_REPOSITORY "https://github.com/jebreimo/Tungsten.git"
+    GIT_TAG v0.2.76)
 
 FetchContent_MakeAvailable(tungsten)
 

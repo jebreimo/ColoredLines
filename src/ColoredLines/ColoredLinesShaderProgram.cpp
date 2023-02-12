@@ -12,25 +12,25 @@
 void ColoredLinesShaderProgram::setup()
 {
     using namespace Tungsten;
-    program = createProgram();
-    auto vertexShader = createShader(GL_VERTEX_SHADER, ColoredLines_vert);
-    attachShader(program, vertexShader);
-    auto fragmentShader = createShader(GL_FRAGMENT_SHADER, ColoredLines_frag);
-    attachShader(program, fragmentShader);
-    linkProgram(program);
-    useProgram(program);
+    program = create_program();
+    auto vertexShader = create_shader(GL_VERTEX_SHADER, ColoredLines_vert);
+    attach_shader(program, vertexShader);
+    auto fragmentShader = create_shader(GL_FRAGMENT_SHADER, ColoredLines_frag);
+    attach_shader(program, fragmentShader);
+    link_program(program);
+    use_program(program);
 
-    positionAttribute = getVertexAttribute(program, "a_Position");
-    redOrigin = getUniform<Xyz::Vector2f>(program, "u_RedOrigin");
-    redVector = getUniform<Xyz::Vector2f>(program, "u_RedVector");
-    redPhase = getUniform<float>(program, "u_RedPhase");
-    redPeriod = getUniform<float>(program, "u_RedPeriod");
-    greenOrigin = getUniform<Xyz::Vector2f>(program, "u_GreenOrigin");
-    greenVector = getUniform<Xyz::Vector2f>(program, "u_GreenVector");
-    greenPhase = getUniform<float>(program, "u_GreenPhase");
-    greenPeriod = getUniform<float>(program, "u_GreenPeriod");
-    blueOrigin = getUniform<Xyz::Vector2f>(program, "u_BlueOrigin");
-    blueVector = getUniform<Xyz::Vector2f>(program, "u_BlueVector");
-    bluePhase = getUniform<float>(program, "u_BluePhase");
-    bluePeriod = getUniform<float>(program, "u_BluePeriod");
+    positionAttribute = get_vertex_attribute(program, "a_Position");
+    redOrigin = get_uniform<Xyz::Vector2F>(program, "u_RedOrigin");
+    redVector = get_uniform<Xyz::Vector2F>(program, "u_RedVector");
+    redPhase = get_uniform<float>(program, "u_RedPhase");
+    redPeriod = get_uniform<float>(program, "u_RedPeriod");
+    greenOrigin = get_uniform<Xyz::Vector2F>(program, "u_GreenOrigin");
+    greenVector = get_uniform<Xyz::Vector2F>(program, "u_GreenVector");
+    greenPhase = get_uniform<float>(program, "u_GreenPhase");
+    greenPeriod = get_uniform<float>(program, "u_GreenPeriod");
+    blueOrigin = get_uniform<Xyz::Vector2F>(program, "u_BlueOrigin");
+    blueVector = get_uniform<Xyz::Vector2F>(program, "u_BlueVector");
+    bluePhase = get_uniform<float>(program, "u_BluePhase");
+    bluePeriod = get_uniform<float>(program, "u_BluePeriod");
 }
